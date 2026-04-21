@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>学习通自动刷课脚本</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: "Microsoft YaHei", sans-serif;
+        }
+        body{
+            background:#f5f5f5;
+            padding:20px;
+            max-width:800px;
+            margin:0 auto;
+        }
+        .card{
+            background:white;
+            padding:30px;
+            border-radius:12px;
+            box-shadow:0 2px 10px rgba(0,0,0,0.08);
+        }
+        h1{
+            font-size:24px;
+            margin-bottom:20px;
+            color:#333;
+        }
+        p{
+            font-size:16px;
+            line-height:1.7;
+            color:#666;
+            margin-bottom:14px;
+        }
+        .item{
+            margin:10px 0;
+            padding-left:10px;
+            border-left:3px solid #4285f4;
+        }
+        img{
+            max-width:100%;
+            border-radius:8px;
+            margin:10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>学习通全自动刷课脚本</h1>
+
+        <p>功能介绍：</p>
+        <div class="item">自动识别视频课程</div>
+        <div class="item">自动2倍速播放</div>
+        <div class="item">自动静音、防止暂停</div>
+        <div class="item">自动跳过章节测验、PPT页面</div>
+        <div class="item">视频播完自动下一集</div>
+        <div class="item">全程无需手动操作</div>
+        <div class="item">注：这玩意暂时不能刷题，因为本人能力有限，且还没有找好AI
+        </div>
+        <h2>我很爱学习，请大家不要乱用，（反正我不用）此玩意没有病毒，我能写出啥病毒出来</h2>
+        <h2>只用于刷视屏，就是有网课的视频，章节测验会自动跳过的</h2>
+        <h3>只能从上往下一路看过去，不会识别哪里刷完了（后续考虑改进）</h3>
+
+        <p>使用效果：</p>
+        <!-- 你之后可以在这里放图片 -->
+        <!-- <img src="你的图片地址" alt="效果演示"> -->
+
+
+        
+
+<a href="https://cn.bing.com/search?qs=HS&pq=%e5%ad%a6%e4%b9%a0%e9%80%9a&sk=CSYN1RQ2MT7LT1CT1HS4&sc=19-3&pglt=899&q=%E5%AD%A6%E4%B9%A0%E9%80%9A&cvid=c1c937c9bd9043cf9b6f45878d5bc3ca&gs_lcrp=EgRlZGdlKgYIABAAGEAyBggAEAAYQDIGCAEQABhAMgYIAhAAGEAyBggDEAAYQDIGCAQQABhAMgYIBRAAGEAyBggGEEUYPTIGCAcQRRg9MgYICBBFGEHSAQg0OTgzajBqN6gCCLACAQ&FORM=ANNTA1&adppc=EDGESSB&PC=LCTS">学习通网页版</a>
+<h3>上面是学习通网页版，使用这个东西的用电脑，而且需要学习通网页版，若上述链接不行，自己找吧，还挺简单的，推荐扫码登陆</h3>
+
+
+<h3>1：登录上之后，打开你想刷的课搞到有视频的哪里，不用点开始</h3>
+<br>
+<br>
+
+
+
+<h3>2:鼠标右键，然后在弹出的菜单里面点检查</h3>
+<br>
+<br>
+
+
+<h3>3:在右边上面（有图标的什么元素，后面那个是控制台）（鼠标在上面呆久了应该会告诉你</h3>
+<br>
+<br>
+
+<h3>4:将下面代码复制在控制台里面，最后按一个回车就可以了</h3>
+<br>
+<br>
+
+
+<h4>复制的时候别复制多了</h4>
+
+
+
+
+
+
+
+
+    </div>
+
+    <!-- 留言反馈框 - 提交直接发到你的邮箱 -->
+<div style="margin:30px 0; padding:20px; background:#f9f9f9; border-radius:10px;">
+
+  <h3 style="margin-bottom:10px;">💬 问题反馈 / 留言</h3>
+
+  <form action="https://formsubmit.co/3090423215@qq.com" method="POST">
+    <!-- 这里换成你的真实邮箱 -->
+
+    <input 
+      type="text" 
+      name="name" 
+      placeholder="你的称呼（选填）" 
+      style="width:100%; padding:10px; margin:5px 0; border-radius:6px; border:1px solid #ddd;"
+    >
+
+    <textarea 
+      name="message" 
+      placeholder="写下你要反馈的内容..." 
+      required 
+      style="width:100%; height:120px; padding:10px; margin:5px 0; border-radius:6px; border:1px solid #ddd;"
+    ></textarea>
+
+    <button 
+      type="submit" 
+      style="background:#007bff; color:white; padding:10px 18px; border:none; border-radius:6px; cursor:pointer;">
+      ✉️ 提交反馈
+    </button>
+
+    <!-- 下面是隐藏设置，不用管 -->
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="basic">
+    <input type="hidden" name="_next" value="">
+  </form>
+</div>
+
+
+
+<div style="margin:30px 0; padding:20px; background:#f9f9f9; border-radius:10px;">
+  <h3 style="margin-bottom:10px;">💬 问题反馈 / 留言</h3>
+
+  <form action="https://formspree.io/f/xwpakbbv" method="POST">
+    <input 
+      type="text" 
+      name="name" 
+      placeholder="你的称呼（选填）" 
+      style="width:100%; padding:10px; margin:5px 0; border-radius:6px; border:1px solid #ddd;"
+    >
+
+    <textarea 
+      name="message" 
+      placeholder="写下你要反馈的内容..." 
+      required 
+      style="width:100%; height:120px; padding:10px; margin:5px 0; border-radius:6px; border:1px solid #ddd;"
+    ></textarea>
+
+    <button 
+      type="submit" 
+      style="background:#007bff; color:white; padding:10px 18px; border:none; border-radius:6px; cursor:pointer;">
+      ✉️ 提交反馈
+    </button>
+  </form>
+</div>
+
+<div style="margin:30px 0; padding:20px; background:#f9f9f9; border-radius:10px;">
+  <h3 style="margin-bottom:10px;">💬 问题反馈 / 留言</h3>
+
+  <form action="https://formspree.io/f/xkgnqzgy" method="POST">
+    <input 
+      type="text" 
+      name="name" 
+      placeholder="你的称呼（选填）" 
+      style="width:100%; padding:10px; margin:5px 0; border-radius:6px; border:1px solid #ddd;"
+    >
+
+    <textarea 
+      name="message" 
+      placeholder="写下你要反馈的内容..." 
+      required 
+      style="width:100%; height:120px; padding:10px; margin:5px 0; border-radius:6px; border:1px solid #ddd;"
+    ></textarea>
+
+    <button 
+      type="submit" 
+      style="background:#007bff; color:white; padding:10px 18px; border:none; border-radius:6px; cursor:pointer;">
+      ✉️ 提交反馈
+    </button>
+
+    <input type="hidden" name="_subject" value="来自刷课脚本网页的反馈">
+  </form>
+</div>
+
+
+<!-- (function(){
+
+    let iframe1
+    let iframe2
+    let video
+    let preventpausing
+    let jumpexampage
+
+    function getvideo(){
+        //  iframe1 = document.querySelector("iframe");
+        //  iframe2 = iframe1.contentDocument.querySelector("iframe.ans-insertvideo-online");//进入视频所在//
+        //  video = iframe2.contentDocument.querySelector("video#video_html5_api");//抓住视频//
+
+
+
+        
+    try {
+    iframe1=document.querySelector("iframe");
+    try {
+        iframe2=iframe1.contentDocument.querySelector("iframe.ans-insertvideo-online");//进入视频所在//
+        try {
+            video=iframe2.contentDocument.querySelector("video#video_html5_api");//抓住视频//
+        } catch(e){goNextSection()
+            video=null
+        }
+    } catch(e){goNextSection()
+        video=null
+    }
+} catch(e){goNextSection()
+    video=null
+}
+
+    }
+    function play1(){
+        if(video){
+             video.playbackRate=2
+             video.muted = true
+             video.play()
+             clearInterval(preventpausing);
+             preventpausing=setInterval(function() {
+                 if (video && video.paused) {
+                     video.play();} }, 2000);
+
+            video.onended = function() {
+             // 3. 关掉上面那个自动播放定时器
+             clearInterval(preventpausing);
+             isvideopage()
+                                        }
+
+    
+ 
+                }          
+        }
+    function goNextSection() {
+    // 获取“下一节”按钮
+    const nextBtn = document.querySelector("#prevNextFocusNext");
+
+    // 如果找到，就点击切换
+    if (nextBtn) {
+        nextBtn.click();
+        console.log("✅ 已切换到下一节");
+    } else {
+        console.log("❌ 未找到下一节按钮");
+    }
+    }
+
+
+    function isvideopage(){
+        goNextSection()
+         jumpexampage=setTimeout(function(){
+            getvideo()
+            if (video){
+                play1()
+                return
+            }
+            isvideopage()
+        }
+
+        ,5000)
+    }
+
+    function run() {
+        console.log('菩萨保佑，开始了');
+        getvideo()
+        play1()
+        
+    }
+
+
+
+run()
+
+})() -->
+
+<pre style="white-space: pre-wrap; font-size:16px; line-height:1.6;">
+
+
+(function(){
+
+    let iframe1
+    let iframe2
+    let video
+    let preventpausing
+    let jumpexampage
+
+    function getvideo(){
+        //  iframe1 = document.querySelector("iframe");
+        //  iframe2 = iframe1.contentDocument.querySelector("iframe.ans-insertvideo-online");//进入视频所在//
+        //  video = iframe2.contentDocument.querySelector("video#video_html5_api");//抓住视频//
+
+
+
+        
+    try {
+    iframe1=document.querySelector("iframe");
+    try {
+        iframe2=iframe1.contentDocument.querySelector("iframe.ans-insertvideo-online");//进入视频所在//
+        try {
+            video=iframe2.contentDocument.querySelector("video#video_html5_api");//抓住视频//
+        } catch(e){goNextSection()
+            video=null
+        }
+    } catch(e){goNextSection()
+        video=null
+    }
+} catch(e){goNextSection()
+    video=null
+}
+
+    }
+    function play1(){
+        if(video){
+             video.playbackRate=2
+             video.muted = true
+             video.play()
+             clearInterval(preventpausing);
+             preventpausing=setInterval(function() {
+                 if (video && video.paused) {
+                     video.play();} }, 2000);
+
+            video.onended = function() {
+             // 3. 关掉上面那个自动播放定时器
+             clearInterval(preventpausing);
+             isvideopage()
+                                        }
+
+    
+ 
+                }          
+        }
+    function goNextSection() {
+    // 获取“下一节”按钮
+    const nextBtn = document.querySelector("#prevNextFocusNext");
+
+    // 如果找到，就点击切换
+    if (nextBtn) {
+        nextBtn.click();
+        console.log("✅ 已切换到下一节");
+    } else {
+        console.log("❌ 未找到下一节按钮");
+    }
+    }
+
+
+    function isvideopage(){
+        goNextSection()
+         jumpexampage=setTimeout(function(){
+            getvideo()
+            if (video){
+                play1()
+                return
+            }
+            isvideopage()
+        }
+
+        ,5000)
+    }
+
+    function run() {
+        console.log('菩萨保佑，开始了');
+        getvideo()
+        play1()
+        
+    }
+
+
+
+run()
+
+})()
+
+
+</pre>
+
+
+
+
+
+
+
+
+</body>
+</html>
